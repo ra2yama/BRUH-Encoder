@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUH Encoder</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .p {
+            background-color: lightgrey;
+            padding: 10px;
+        }
+    </style>
+    <script type="module">import * as hello from "./__target__/bruh.js";</script>
+</head>
+<body>
+    <h1 class="center">Bruh Encoder/Decoder</h1>
+    <p class="center">Use this to Bruh-Encode plaintext, and decode Bruh-Code.</p><br><br>
+    <div class="center">
+        <h2>Encode plaintext</h2>
+        <textarea id="encode" rows="4" cols="50"></textarea><br><br>
+        <button id="encode-button">ENCODE</button>
+        <h3>Output:</h3>
+        <p id="encode-p" class="p"></p><br>
+        <h2>Decode BRUH-Code</h2>
+        <textarea id="decode" rows="4" cols="50"></textarea><br><br>
+        <button id="decode-button">DECODE</button>
+        <h3>Output:</h3>
+        <p id="decode-p" class="p"></p><br>
+    </div>
+
+    
+</body>
+</html>
