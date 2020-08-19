@@ -53,35 +53,38 @@ export var decode = function (input_string) {
 	}
 
 	// print(bruh_list)
+	print(input_string [input_string.length - 1]);
 
 	if (len (bruh_list) <= 0) {
-		if (input_string [-(1)] == '!') {
-			bruh_list.append([input_string.__getslice__ (-(5), -(1), 1) + ' ']);
+		if (input_string [input_string.length - 1] == "!") {
+		print("FOUND")
+			bruh_list.append(input_string.__getslice__ (-(5), -(1), 1) + ' ');
 		}
 		else {
-			bruh_list.append([input_string.__getslice__ (-(4), null, 1)]);
+			bruh_list.append(input_string.__getslice__ (-(4), null, 1));
 		}
 	}
-	else if (input_string [-(1)] == '!') {
+	else if (input_string [input_string.length - 1] == "!") {
+		print("FOUND")
 		bruh_list.append(input_string.__getslice__ (-(5), -(1), 1) + ' ');
 	}
 	else {
 		bruh_list.append(input_string.__getslice__ (-(4), null, 1));
 	}
 
-	print(bruh_list)
+	// print(bruh_list)
 
 	var toRet = [];
 	for (var bruh of bruh_list) {
 		toRet.append (bruh_to_letter (bruh));
 	}
 
-	print(toRet)
+	// print(toRet)
 	return ''.join (toRet);
 };
 export var bruh_to_letter = function (bruh) {
 	var bruh_values = bruh.__getslice__ (0, 4, 1);
-	print(bruh_values)
+	// print(bruh_values)
 	var bits = (function () {
 		var __accu0__ = [];
 		for (var letter of bruh_values) {
@@ -91,7 +94,7 @@ export var bruh_to_letter = function (bruh) {
 	}) ();
 
 	var bits = (len (bruh) == 5 ? '1' : '0') + ''.join (bits);
-	print(bits)
+	// print(bits)
 	var index = parseInt(bits, 2);
 	return (index < len (alphabet) ? alphabet [index] : '<OOV>');
 };
@@ -100,7 +103,7 @@ export var encode_button = function () {
 	document.getElementById ('encode-p').innerHTML = value;
 };
 export var decode_button = function () {
-	var value = decode (document.getElementById ('decode').value);
+	var value = decode (document.getElementById ('decode').value.trim());
 	document.getElementById ('decode-p').innerHTML = value;
 };
 document.getElementById ('encode-button').addEventListener ('click', encode_button);
