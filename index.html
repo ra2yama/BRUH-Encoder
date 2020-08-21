@@ -18,6 +18,7 @@
             padding: 10px;
         }
     </style>
+    <script src="huffman.js"></script>
     <script type="module">import * as hello from "./target/bruh.js";</script>
 </head>
 <body>
@@ -34,6 +35,24 @@
         <button id="decode-button">DECODE</button>
         <h3>Output:</h3>
         <p id="decode-p" class="p"></p><br>
+    </div>
+    <h1 class="center">Hide Text in Other Text</h1>
+    <p class="center">or, hide a message in text using only capitalization</p><br>
+    <div class="center">
+        <h2>Hide a message</h2>
+        <p>repeat message? <input type="checkbox" id="repeating"/></p>
+        <p>put the message you want to hide...</p>
+        <textarea id="hide-plain" rows="4" cols="50"></textarea>
+        <p>and the text you want to hide it in...</p>
+        <textarea id="hide-mask" rows="4" cols="50"></textarea><br><br>
+        <button id="hide-button">ENCODE</button>
+        <h3>Output:</h3>
+        <p id="hide-p" class="p"></p><br>
+        <h2>Uncover a message</h2>
+        <textarea id="hidden-mask" rows="4" cols="50"></textarea><br><br>
+        <button id="hidden-button">DECODE</button>
+        <h3>Output:</h3>
+        <p id="hidden-p" class="p"></p><br>
     </div>
 
     
